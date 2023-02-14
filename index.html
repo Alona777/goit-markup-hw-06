@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=h1, initial-scale=1.0" />
-		<title>goit-markup-hw-05</title>
+		<title>goit-markup-hw-06</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -57,14 +57,87 @@
 			<section class="hero">
 				<div class="container">
 					<h1 class="hero-title">Effective Solutions for Your Business</h1>
-					<button class="hero-btn" type="button" data-modal-open>Order Service</button>
+					<button class="hero-btn" type="button" data-modal-open>
+						Order Service
+					</button>
 					<div class="backdrop is-hidden" data-modal>
-						<div class="modal">
+						<div class="modal-window">
 							<button class="btn-modal-close" type="button" data-modal-close>
 								<svg class="modal-icon-close">
 									<use href="./images/modal-close-btn.svg#icon-close"></use>
 								</svg>
 							</button>
+							<form class="modal-form" name="modal-form">
+								<p class="modal-title">
+									Leave your contacts and we will call you back
+								</p>
+								<label class="modal-label"
+									><span class="label-desc">Name</span>
+									<span class="modal-input-wrapper">
+										<input
+											class="modal-input"
+											type="text"
+											name="user_name"
+											required
+											pattern="[a-zA-Zа-яА-Я]+" />
+
+										<svg class="modal-input-svg">
+											<use
+												href="./images/modal-footer-icon.svg#icon-person"></use>
+										</svg>
+									</span>
+								</label>
+								<label class="modal-label"
+									><span class="label-desc">Phone</span>
+
+									<span class="modal-input-wrapper">
+										<input
+											class="modal-input"
+											type="tel"
+											name="user_number"
+											required
+											pattern="[0-9]{3}-[0-9]{3}-0-9]{2}-0-9]{2}"
+											title="xxx-xxx-xx-xx" />
+
+										<svg class="modal-input-svg">
+											<use
+												href="./images/modal-footer-icon.svg#icon-phone"></use>
+										</svg>
+									</span>
+								</label>
+								<label class="modal-label"
+									><span class="label-desc">Email</span>
+									<span class="modal-input-wrapper">
+										<input
+											class="modal-input"
+											type="mail"
+											name="user_mail"
+											required />
+
+										<svg class="modal-input-svg">
+											<use
+												href="./images/modal-footer-icon.svg#icon-email"></use>
+										</svg>
+									</span>
+								</label>
+								<label class="modal-label-comment"
+									><span class="label-desc">Comment</span>
+									<textarea
+										class="user-message"
+										name="user_message"
+										placeholder="Text input"></textarea>
+								</label>
+								<input
+									id="modal-check"
+									class="modal-check visually-hidden"
+									type="checkbox" />
+								<label for="modal-check" class="label-check">
+									I accept the terms and conditions of the&nbsp
+									<a href="#">Privacy Policy</a>
+								</label>
+
+								<button class="modal-submit-btn" type="submit">Send</button>
+							</form>
 						</div>
 					</div>
 				</div>
@@ -438,6 +511,23 @@
 						</li>
 					</ul>
 				</div>
+				<form class="footer-subscribe">
+					<p class="footer-subscribe-label">Subscribe</p>
+					<div class="footer-wraper">
+						<input
+							class="user-mail-subscribe"
+							aria-label="email"
+							type="mail"
+							name="user-mail-subscribe"
+							placeholder="E-mail" />
+						<button class="subscribe-btn" type="submit">
+							Subscribe
+							<svg class="subscribe-svg">
+								<use href="./images/modal-footer-icon.svg#icon-send"></use>
+							</svg>
+						</button>
+					</div>
+				</form>
 			</div>
 		</footer>
 		<script src="./js/modal.js"></script>
